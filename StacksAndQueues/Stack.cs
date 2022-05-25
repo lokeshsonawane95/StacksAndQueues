@@ -33,6 +33,29 @@ namespace StacksAndQueues
             Console.WriteLine(newNode.data + " is pushed/inserted onto the stack");
         }
 
+        //For peeking stack
+        internal void Peek()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("Top of the stack is : " + top.data);
+        }
+
+        //For popping/(deleting first) node from the stack
+        internal void Pop()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty : nothing to pop");
+                return;
+            }
+            Console.WriteLine(top.data + " is popped/deleted from the stack");
+            top = top.next;
+        }
+
         //For displaying theh stack
         internal void display()
         {
