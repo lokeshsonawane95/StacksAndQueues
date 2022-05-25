@@ -33,6 +33,22 @@ namespace StacksAndQueues
             Console.WriteLine(newNode.data + " is enqueued/inserted into the queue");
         }
 
+        //For deleting/dequeueing node from the front/head of the queue
+        internal void Dequeue()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Queue is empty : nothing to dequeue");
+            }
+            else
+            {
+                Console.WriteLine(head.data + " is dequeued/deleted from the queue");
+
+                //Moving head to the next node
+                head = head.next;
+            }
+        }
+
         //For displaying nodes present in the queue
         internal void Display()
         {

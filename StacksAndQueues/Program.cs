@@ -12,6 +12,7 @@ namespace StacksAndQueues
                 Console.WriteLine("\n1. Create Stack of 56->30->70");
                 Console.WriteLine("2. Peek and Pop till the stack is empty");
                 Console.WriteLine("3. Create Queue of 56->30->70");
+                Console.WriteLine("4. Dequeue from the beginning of the queue");
                 Console.WriteLine("0. Exit");
                 Console.Write("Enter your choice : ");
                 choice = Convert.ToInt32(Console.ReadLine());
@@ -55,6 +56,25 @@ namespace StacksAndQueues
                         q1.Enqueue(30);
                         q1.Enqueue(70);
                         q1.Display();
+                        break;
+                    case 4:
+                        Queue q2 = new Queue();
+                        q2.Enqueue(56);
+                        q2.Enqueue(30);
+                        q2.Enqueue(70);
+                        q2.Display();
+
+                        //Dequeue 1st
+                        q2.Dequeue();
+                        q2.Display();
+
+                        //Dequeue 2nd
+                        q2.Dequeue();
+                        q2.Display();
+
+                        //Dequeue 3rd
+                        q2.Dequeue();
+                        q2.Display();
                         break;
                     default:
                         Console.WriteLine("Please choose correct option from the list");
